@@ -1,0 +1,24 @@
+#include<stdio.h>
+int is_prime_number(int *p)
+{
+int i;
+for(i = 2; i <= *p/2; i++)
+{
+if(*p % i ==0)
+{
+break;
+}
+}
+if(i > *p/2)
+printf("%d is a Prime Number",*p);
+else
+printf("\n%d is not a Prime Number\n", *p);
+}
+int main()
+{
+int n,i;
+scanf("%d",&n);
+int *p = &n;
+is_prime_number(p);
+return 0;
+}
